@@ -257,7 +257,7 @@ class PixelRobot {
         this.terminalOutput.textContent = '';
         await this.typeText('> PUNCH.EXE COMPLETE', 30);
         await this.typeText('> DAMAGE: CRITICAL', 30);
-        await this.typeText('> :)', 100);
+        await this.typeText('> :) JOKE COMPLETED', 100);
 
         // Fade out
         await this.sleep(5000);
