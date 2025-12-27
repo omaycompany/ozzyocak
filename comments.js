@@ -146,7 +146,7 @@ ${commentJson}
         const formContainer = document.getElementById(`comment-form-${postId}`).parentElement;
         formContainer.innerHTML = `
             <div class="comment-success">
-                <p>✅ <strong>thanks for your comment!</strong></p>
+                <p> <strong>one last step!</strong></p>
                 <a href="${githubUrl}" target="_blank" class="github-submit-btn">
                     submit via github →
                 </a>
