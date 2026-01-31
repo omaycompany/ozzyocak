@@ -145,6 +145,29 @@ header {
     transform: rotate(45deg);
 }
 
+.share-btn {
+    font-size: 0.75rem;
+    color: var(--accent);
+    cursor: pointer;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    margin-left: auto;
+    pointer-events: auto;
+}
+
+.share-btn:hover {
+    color: var(--text-secondary);
+}
+
+.share-btn.copied::after {
+    content: 'copied!';
+    font-size: 0.7rem;
+    color: var(--text-secondary);
+}
+
 /* post content */
 .post-content-wrapper {
     display: grid;
