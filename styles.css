@@ -209,6 +209,39 @@ header {
     color: var(--text-secondary);
 }
 
+.video-link {
+    display: block;
+    position: relative;
+    margin: var(--spacing-md) 0;
+    color: #ffffff !important;
+    text-decoration: none !important;
+    width: 100%;
+    overflow: hidden;
+    background: #262626;
+}
+
+.video-link img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    opacity: 0.78;
+}
+
+.video-link span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0.55rem 0.8rem;
+    background: rgba(0, 0, 0, 0.72);
+    color: #ffffff;
+    font-size: 0.9rem;
+    font-weight: 500;
+    line-height: 1;
+    text-transform: lowercase;
+}
+
 /* footer */
 footer {
     padding: var(--spacing-xl) 0 var(--spacing-lg);
