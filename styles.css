@@ -209,6 +209,23 @@ header {
     color: var(--text-secondary);
 }
 
+.post-image {
+    margin: var(--spacing-md) 0;
+}
+
+.post-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.post-image figcaption {
+    margin-top: var(--spacing-xs);
+    color: var(--text-secondary);
+    font-size: 0.75rem;
+    text-align: center;
+}
+
 .video-link {
     display: block;
     position: relative;
