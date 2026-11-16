@@ -9,18 +9,16 @@ class CommentSystem {
             { q: "45 + 23", a: 68 },
             { q: "100 - 37", a: 63 }
         ];
-        this.currentQuestion = null;
     }
 
     // Get random math question
     getRandomQuestion() {
-        this.currentQuestion = this.mathQuestions[Math.floor(Math.random() * this.mathQuestions.length)];
-        return this.currentQuestion;
+        return this.mathQuestions[Math.floor(Math.random() * this.mathQuestions.length)];
     }
 
     // Validate answer
-    validateAnswer(answer) {
-        return parseInt(answer) === this.currentQuestion.a;
+    validateAnswer(answer, question) {
+        return parseInt(answer) === question.a;
     }
 
     // Load comments for a post
@@ -100,18 +98,18 @@ class CommentSystem {
         // Handle form submission
         document.getElementById(`comment-form-${postId}`).addEventListener('submit', (e) => {
             e.preventDefault();
-            this.handleSubmit(postId);
+            this.handleSubmit(postId, question);
         });
     }
 
     // Handle form submission
-    handleSubmit(postId) {
+    handleSubmit(postId, question) {
         const name = document.getElementById(`comment-name-${postId}`).value.trim();
         const text = document.getElementById(`comment-text-${postId}`).value.trim();
         const captcha = document.getElementById(`comment-captcha-${postId}`).value;
 
         // Validate captcha
-        if (!this.validateAnswer(captcha)) {
+        if (!this.validateAnswer(captcha, question)) {
             alert('❌ wrong answer! try again.');
             document.getElementById(`comment-captcha-${postId}`).value = '';
             document.getElementById(`comment-captcha-${postId}`).focus();
